@@ -47,10 +47,7 @@ public class APITest {
     @Test
     public void testTest() throws Exception {
             Client restClient = ClientBuilder.newClient();
-            //restClient.register(new CsrfProtectionFilter()); //register a filter, here a predefined one
-
             WebTarget target = restClient.target("http://localhost:8888/jsonServices/");
-            // target.register(new CsrfProtectionFilter());//or register on a target
             WebTarget resourceTarget = target.path("/test"); //change the URI without affecting a root URI
             String responseString = resourceTarget.request("text/plain").get(String.class);
             System.out.println("Here is the response: "+responseString);
