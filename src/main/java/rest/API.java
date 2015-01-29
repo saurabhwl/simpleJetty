@@ -10,8 +10,8 @@ public class API {
         @GET
         @Path("/print/{name}")
         @Produces(MediaType.APPLICATION_JSON)
-        public Student produceJSON( @PathParam("name") String name ) {
-            Student st = new Student(name, "Joe",22,1);
+        public Person produceJSON( @PathParam("name") String name ) {
+            Person st = new Person(name, "Joe",22,1);
             return st;
 
         }
@@ -19,9 +19,9 @@ public class API {
         @POST
         @Path("/send")
         @Consumes(MediaType.APPLICATION_JSON)
-        public Response consumeJSON( Student student ) {
+        public Response consumeJSON( Person person) {
 
-            String output = student.toString();
+            String output = person.toString();
 
             return Response.status(200).entity(output).build();
         }

@@ -7,7 +7,7 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
 /**
- * The simplest possible Jetty server.
+ * A simple Jetty server.
  */
 public class WebServer
 {

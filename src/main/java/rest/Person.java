@@ -1,17 +1,17 @@
 package rest;
 
-public class Student {
+public class Person {
 
     private int id;
     private String firstName;
     private String lastName;
     private int age;
 
-    public Student() {
+    public Person() {
 
     }
 
-    public Student(String fname, String lname, int age, int id) {
+    public Person(String fname, String lname, int age, int id) {
         this.firstName = fname;
         this.lastName = lname;
         this.age = age;
